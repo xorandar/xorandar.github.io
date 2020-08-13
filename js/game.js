@@ -6,7 +6,7 @@ var x = 0;
 
 
 function init(){
-	print("yolo");
+	
 }
 
 function update(){
