@@ -18,7 +18,7 @@ function draw(){
 	ctx.clearRect(0,0,mainCanvas.width,mainCanvas.height);
 	ctx.beginPath();
 	ctx.rect(x,0,mainCanvas.width/2,mainCanvas.height/2);
-	ctx.fillStyle = "#ff0000";
+	ctx.fillStyle = "#ff4400";
 	ctx.fill();
 	ctx.closePath();
 	requestAnimationFrame(draw);
