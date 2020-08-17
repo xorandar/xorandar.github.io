@@ -1,28 +1,39 @@
 var mainCanvas = document.getElementById("mainCanvas");
-mainCanvas.width = window.innerWidth;
-mainCanvas.height = window.innerHeight;
 var ctx = mainCanvas.getContext("2d");
-var x = 0;
+var goat;
+var tMap = [];
+
+function getMousePosition(canvas, event) { 
+  let rect = canvas.getBoundingClientRect(); 
+  goat.targetX = event.clientX - rect.left; 
+  goat.targetY = event.clientY - rect.top; 
+  console.log("Coordinate x: " + goat.targetX, "Coordinate y: " + goat.targetY);
+  if(goat.x != goat.targetX && goat.y != goat.targetY) goat.moving = true;
+  } 
+      
+  mainCanvas.addEventListener("mousedown", function(e){ 
+    getMousePosition(mainCanvas, e); 
+  });
 
 
 function init(){
-	
+  tMap = new Tilemap();
+	goat = new Mob(0,0);
 }
 
 function update(){
-	x += 1;
+	goat.update(tMap);
 	requestAnimationFrame(update);
 }
 
 function draw(){
 	ctx.clearRect(0,0,mainCanvas.width,mainCanvas.height);
-	ctx.beginPath();
-	ctx.rect(x,0,mainCanvas.width/2,mainCanvas.height/2);
-	ctx.fillStyle = "#ff4400";
-	ctx.fill();
-	ctx.closePath();
+	tMap.draw(ctx);
+	goat.draw(ctx);
 	requestAnimationFrame(draw);
 }
+
+
 
 init();
 update();
