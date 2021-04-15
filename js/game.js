@@ -1,38 +1,25 @@
-var mainCanvas = document.getElementById("mainCanvas");
 var ctx = mainCanvas.getContext("2d");
-var goat;
-var tMap = [];
-
-function getMousePosition(canvas, event) { 
-  let rect = canvas.getBoundingClientRect(); 
-  goat.targetX = event.clientX - rect.left; 
-  goat.targetY = event.clientY - rect.top; 
-  console.log("Coordinate x: " + goat.targetX, "Coordinate y: " + goat.targetY);
-  if(goat.x != goat.targetX && goat.y != goat.targetY) goat.moving = true;
-  } 
-      
-  mainCanvas.addEventListener("mousedown", function(e){ 
-    getMousePosition(mainCanvas, e); 
-  });
+var canvasColor = "#336D39";
+var cellSize = 128;
+var gameState,player;
 
 
 function init(){
-  tMap = new Tilemap();
-	goat = new Mob(0,0);
+    player = new Entity("player", 200,300,cellSize,cellSize);
+    gameState = "start";
 }
 
 function update(){
-	goat.update(tMap);
+    player.update();
 	requestAnimationFrame(update);
 }
 
 function draw(){
-	ctx.clearRect(0,0,mainCanvas.width,mainCanvas.height);
-	tMap.draw(ctx);
-	goat.draw(ctx);
+	ctx.fillStyle = canvasColor;
+	ctx.fillRect(0,0,mainCanvas.width,mainCanvas.height);
+	player.draw();
 	requestAnimationFrame(draw);
 }
-
 
 
 init();

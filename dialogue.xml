@@ -1,0 +1,11 @@
+<menu>    
+    <main>
+        <id>home</id>
+        <screentitle>Home</screentitle>
+        <descText>What do you want to do?</descText>
+        <topleft>Inventory</topleft>
+        <topright>Adventure</topright>
+        <bottomleft>Shop</bottomleft>
+        <bottomright>Quit</bottomright>
+    </main>
+</menu>

@@ -1,0 +1,67 @@
+#gameBlock{
+    width: 512;
+    height:512;
+    margin: auto;
+}
+
+#screenTitle{
+    margin: auto;
+    text-align: center;
+    font-size: 24px;
+}
+
+#mainCanvas{
+    margin: auto;
+    width: 100%;
+    height: 100%;
+}
+
+#dialogueBlock{
+    display: flex;
+    width:512;
+    height:72;
+    margin:auto;
+    padding:-4px;
+}
+
+#gameDialogue{
+    margin: auto;
+    width: 80%;
+    height:100%;
+    background-color: #ccc;
+}
+
+#prevButton{
+    margin: auto;
+    width:10%;
+    height:100%;
+}
+
+#nextButton{
+    margin:auto;
+    width:10%;
+    height:100%;
+}
+
+#choiceBlock{
+    display: flex;
+    width:512;
+    height:36;
+    margin:auto;
+    padding:-4px;
+}
+
+#choiceRow1{
+    width:100%;
+    height:100%;
+}
+
+#choiceRow2{
+    width:100%;
+    height:100%;
+}
+
+.choice{
+    width:100%;
+    height:100%;
+}

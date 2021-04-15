@@ -1,0 +1,56 @@
+data = '[
+        {
+            "id":"home",
+            "screentitle":"Home",
+            "descText":"What do you want to do?",
+            "topleft":"Inventory",
+            "topright":"Adventure",
+            "botleft":"Shop",
+            "botright":"Quit"
+        },
+        {
+            "id":"adv0",
+            "screentitle":"Adventure",
+            "descText":"A goblin has been spotted!",
+            "topleft":"Accept Battle",
+            "topright":"Reject Battle",
+            "botleft":"Inventory",
+            "botright":"Return to camp"
+        },
+        {
+            "id":"adv1",
+            "screentitle":"Adventure",
+            "descText":"You seek out a different goblin, accept?",
+            "topleft":"Accept Battle",
+            "topright":"Reject Battle",
+            "botleft":"Inventory",
+            "botright":"Return to camp"
+        },
+        {
+            "id":"battle0",
+            "screentitle":"Battle",
+            "descText":"Choose an action:",
+            "topleft":"Attack",
+            "topright":"Examine enemy",
+            "botleft":"Inventory",
+            "botright":"Flee"
+        },
+        {
+            "id":"movelist",
+            "screentitle":"Battle",
+            "descText":"Select a move:",
+            "topleft":"Tackle",
+            "topright":"Leer",
+            "botleft":"Throw Rock",
+            "botright":"Kick"
+        },
+        {
+            "id":"inventory",
+            "screentitle":"Inventory",
+            "descText":"Press arrows to select items",
+            "topleft":"Use Item",
+            "topright":"Destroy Item",
+            "botleft":"Examine Item",
+            "botright":"Back"
+        }
+]'

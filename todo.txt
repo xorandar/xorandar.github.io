@@ -1,0 +1,10 @@
+Current features:
+    canvas
+    4 buttons to navigate game
+    
+desired gameplay features:
+    health, stamina, experience, gold, level, inventory
+    seeking battle generates random enemy within player's level range
+        defeating enemy gains player experience and gold
+        animated fights(pokemon-esque)
+        
